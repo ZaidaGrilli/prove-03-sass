@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap");
+body {
+  display: grid;
+}
+
+h1 {
+  text-align: center;
+}
+
+h1 > a {
+  font-family: "Lora", serif;
+  text-decoration: none;
+  font-size: 200%;
+  color: #333;
+  overflow: hidden;
+}
+
+h1 > a:visited {
+  font-family: "Lora", serif;
+  text-decoration: none;
+  color: #333;
+}
+
+h2 > a {
+  font-family: "Lora", serif;
+  text-decoration: none;
+  color: #666;
+}
+
+h2 > a:visited {
+  color: #666;
+}
+
+p {
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #333;
+}
+
+nav > ul {
+  border-top: 1px solid rgb(194, 194, 194);
+  border-bottom: 1px solid rgb(194, 194, 194);
+  list-style: none;
+  text-transform: uppercase;
+  clear: both;
+  display: flex;
+  margin: 1em;
+  white-space: nowrap;
+  flex-direction: column;
+  font-size: 1.3em;
+}
+
+nav > ul > li {
+  padding-block: 2%;
+  overflow: visible;
+  text-align: center;
+}
+
+nav > ul > li > a {
+  color: #666;
+  text-decoration: none;
+}
+
+nav > ul > li > a:hover {
+  text-decoration: none;
+  color: #00ddff;
+}
+
+nav > ul > li > a:active {
+  text-decoration: none;
+  color: #DEB887;
+}
+
+.post-date {
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(194, 194, 194);
+  font-size: 1.4em;
+  font-family: "Lora", serif;
+}
+
+.post-content h2 {
+  text-align: center;
+  color: #333;
+}
+
+.post-date, .post-content {
+  text-align: right;
+  padding-right: 1em;
+  padding-bottom: 1em;
+  padding-top: 1em;
+}
+
+.post-content > p {
+  text-align: left;
+  padding-left: 1em;
+}
+
+.post-content > p > a {
+  text-decoration: none;
+  font-size: 100%;
+}
+
+figure {
+  display: flex;
+  justify-content: center;
+}
+
+figure > img {
+  width: 250px;
+}
+
+@media screen and (min-width: 740px) {
+  nav ul {
+    flex-direction: row;
+    justify-content: right;
+    gap: 1em;
+    font-size: 1.3em;
+  }
+  main article {
+    display: flex;
+    border-bottom: 1px solid rgb(194, 194, 194);
+  }
+  .post-date {
+    width: 200px;
+    font-size: 1.4em;
+    border-bottom: none;
+    border-right: 1px solid rgb(194, 194, 194);
+    text-align: right;
+    padding-right: 1em;
+    white-space: nowrap;
+    padding-top: 2em;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 200px;
+  }
+  .post-content {
+    padding-left: 2em;
+  }
+  .post-content p a {
+    font-size: 100%;
+  }
+  .post-content h2 {
+    text-align: left;
+  }
+}/*# sourceMappingURL=main.css.map */
