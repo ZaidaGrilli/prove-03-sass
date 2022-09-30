@@ -5,92 +5,87 @@
 
 $grey-title-color:#666;
 $black-title-color:#333;
+$active-color:#DEB887;
+$hover-color:#00ddff;
 
-
-
-
+@mixin grey-border($radius) {
+    border-top: $radius solid rgb(194, 194, 194);
+    border-bottom: $radius solid rgb(194, 194, 194) ;
+}
+@mixin padding {
+    text-align: right;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    padding-top: 1em;
+}
 
 body{
     display: grid;
     
 }
-
-h1 {
+h1{
     text-align: center;
+    a {
+        font-family: 'Lora', serif;
+        text-decoration: none;
+        font-size: 200%;
 
-}
-h1 > a {
-    font-family: 'Lora', serif;
-    text-decoration: none;
-    font-size: 200%;
-
-    color:#333;
-    overflow: hidden;
-    
-}
-h1 > a:visited {
-    font-family: 'Lora', serif;
-    text-decoration: none;
-    color: #333;
+        color:$black-title-color;
+        overflow: hidden;
+    }
 }
 
-h2 > a {
-    font-family: 'Lora', serif;
-    text-decoration: none;
-    color: #666;
+h2{
+    a {
+        font-family: 'Lora', serif;
+        text-decoration: none;
+        color: $grey-title-color;
+        :visited{
+            color: $grey-title-color;
+        }   
+    }
 }
 
-
-h2 > a:visited{
-    color: #666;
-
-}
 p {
     font-family: 'Helvetica', 'Arial', sans-serif;
     color: #333;
 }
 
+nav {
+    ul {
+        @include grey-border(1px);
+        list-style: none;
+        text-transform: uppercase;
+        clear: both;
+        display: flex;
+        margin: 1em;
+        white-space: nowrap;
+        flex-direction: column;
+        font-size: 1.3em;
+        li {
+            padding-block: 2%;
+            overflow:visible;
+            text-align: center;
+            margin-right: 1.5em;
+            a {
+                color: $grey-title-color;
+                text-decoration: none;  
 
-nav > ul {
-    border-top: 1px solid rgb(194, 194, 194);
-    border-bottom: 1px solid rgb(194, 194, 194) ;
-    list-style: none;
-    text-transform: uppercase;
-    clear: both;
-    display: flex;
-    margin: 1em;
-    white-space: nowrap;
-    flex-direction: column;
-    font-size: 1.3em;
-
+            }
+            a:hover{
+                text-decoration: none;
+                color:$hover-color;    
+            }
+            a:active{
+                text-decoration: none;
+                color: $active-color;
+            }
+            
+        }
+        
+    }
+       
 }
-
-nav > ul > li {
-    padding-block: 2%;
-    overflow:visible;
-    text-align: center;
-
-}
-nav > ul > li > a {
-    color: #666;
-    text-decoration: none;
-    
-    
-}
-
-nav > ul > li > a:hover{
-    text-decoration: none;
-    color: #00ddff;
-
-}
-nav > ul > li > a:active{
-    text-decoration: none;
-    color: #DEB887;
-    
-}
-
-
-
 
 .post-date{
     text-transform: uppercase;
@@ -98,38 +93,36 @@ nav > ul > li > a:active{
     font-size: 1.4em;
     font-family: 'Lora' , serif;
 }
-.post-content h2 {
-    text-align: center;
-    color: #333;
+
+.post-content{
+    h2{
+        text-align: center;
+        color:$black-title-color;
+    }
+    p {
+        text-align:left;
+        padding-left: 1em;
+        a {
+            text-decoration: none;
+            font-size: 100%;
+
+        }
+    }   
 }
 
 .post-date , .post-content {
-
-    text-align: right;
-    padding-right: 1em;
-    padding-bottom: 1em;
-    padding-top: 1em;
+    @include padding;
 }
 
-.post-content > p {
-    text-align:left;
-    padding-left: 1em;
-    
-    
-}
-.post-content > p > a {
-    text-decoration: none;
-    font-size: 100%;
-    
-}
 
 figure {
     display: flex;
     justify-content: center;
-}
-figure > img{
+    img {
     width: 250px;
 }
+}
+
 
 
 @media screen and (min-width: 740px) { 
