@@ -7,6 +7,7 @@ $grey-title-color:#666;
 $black-title-color:#333;
 $active-color:#DEB887;
 $hover-color:#00ddff;
+$break-medium: 740px;
 
 @mixin grey-border($radius) {
     border-top: $radius solid rgb(194, 194, 194);
@@ -18,6 +19,12 @@ $hover-color:#00ddff;
     padding-bottom: 1em;
     padding-top: 1em;
 }
+
+@mixin breakpoint($break) {
+    @if $break == medium {
+    @media screen and (min-width: $break-medium) {@content;}
+    }
+    }
 
 body{
     display: grid;
@@ -120,12 +127,12 @@ figure {
     justify-content: center;
     img {
     width: 250px;
+    }
 }
-}
 
 
 
-@media screen and (min-width: 740px) { 
+@include breakpoint(medium) { 
     nav ul {
         flex-direction: row;
         justify-content: right;

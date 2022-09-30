@@ -6,8 +6,7 @@ body {
 h1 {
   text-align: center;
 }
-
-h1 > a {
+h1 a {
   font-family: "Lora", serif;
   text-decoration: none;
   font-size: 200%;
@@ -15,19 +14,12 @@ h1 > a {
   overflow: hidden;
 }
 
-h1 > a:visited {
-  font-family: "Lora", serif;
-  text-decoration: none;
-  color: #333;
-}
-
-h2 > a {
+h2 a {
   font-family: "Lora", serif;
   text-decoration: none;
   color: #666;
 }
-
-h2 > a:visited {
+h2 a :visited {
   color: #666;
 }
 
@@ -36,7 +28,7 @@ p {
   color: #333;
 }
 
-nav > ul {
+nav ul {
   border-top: 1px solid rgb(194, 194, 194);
   border-bottom: 1px solid rgb(194, 194, 194);
   list-style: none;
@@ -48,24 +40,21 @@ nav > ul {
   flex-direction: column;
   font-size: 1.3em;
 }
-
-nav > ul > li {
+nav ul li {
   padding-block: 2%;
   overflow: visible;
   text-align: center;
+  margin-right: 1.5em;
 }
-
-nav > ul > li > a {
+nav ul li a {
   color: #666;
   text-decoration: none;
 }
-
-nav > ul > li > a:hover {
+nav ul li a:hover {
   text-decoration: none;
   color: #00ddff;
 }
-
-nav > ul > li > a:active {
+nav ul li a:active {
   text-decoration: none;
   color: #DEB887;
 }
@@ -81,6 +70,14 @@ nav > ul > li > a:active {
   text-align: center;
   color: #333;
 }
+.post-content p {
+  text-align: left;
+  padding-left: 1em;
+}
+.post-content p a {
+  text-decoration: none;
+  font-size: 100%;
+}
 
 .post-date, .post-content {
   text-align: right;
@@ -89,22 +86,11 @@ nav > ul > li > a:active {
   padding-top: 1em;
 }
 
-.post-content > p {
-  text-align: left;
-  padding-left: 1em;
-}
-
-.post-content > p > a {
-  text-decoration: none;
-  font-size: 100%;
-}
-
 figure {
   display: flex;
   justify-content: center;
 }
-
-figure > img {
+figure img {
   width: 250px;
 }
 
